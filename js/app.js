@@ -2,7 +2,12 @@
 function comprar () {
     let tipoDoIngresso = document.getElementById("tipo-ingresso").value;
     let quantidade = document.getElementById("qtd").value;
-    let qtdDisponivel = parseInt(document.getElementById(`qtd-${tipoDoIngresso}`).textContent);
+    let qtdDisponivel = document.getElementById(`qtd-${tipoDoIngresso}`);
+
+    let novaQuantidade = parseInt(qtdDisponivel.textContent) - quantidade;
+
+    qtdDisponivel.innerHTML = novaQuantidade;
+
 
 
 
