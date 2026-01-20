@@ -10,11 +10,16 @@ function comprar () {
         return
     };
 
+    if (quantidade == "" || quantidade == 0) {
+        alert("Você não adicionou nenhuma quantidade válida para compra. Por favor, revise o campo de quantidade e tente novamente.");
+        return
+    }
+
     let novaQuantidade = qtdDisponivelNum - quantidade;
 
     qtdDisponivelGetId.innerHTML = novaQuantidade;
 
-    quantidade = "";
+    quantidade.value = " ";
 
 }
 
