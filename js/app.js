@@ -4,22 +4,14 @@ function comprar () {
     let quantidade = document.getElementById("qtd").value;
     let qtdDisponivel = document.getElementById(`qtd-${tipoDoIngresso}`);
 
+    if (quantidade > qtdDisponivel) {
+        alert("Infelizmente, não teremos ingressos suficientes para essa categoria. Por favor, verifique a disponibilidade dos ingressos por categoria na parte inferior do site.");
+        return;
+    };
+
     let novaQuantidade = parseInt(qtdDisponivel.textContent) - quantidade;
 
     qtdDisponivel.innerHTML = novaQuantidade;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -28,7 +20,7 @@ function comprar () {
 /*
 Oq fazer:
 
-diminuir a quantidade comprada da categoria selecionada
+
 
 criar um alert que indique quando a quantidade que deseja ser comprada for superior a disponivel
 
