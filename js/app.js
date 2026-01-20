@@ -25,6 +25,7 @@ Oq fazer:
 
 
 
+
 criar um alert que indique quando a quantidade que deseja ser comprada for superior a disponivel
 
 criar um alert que avise quando os ingressos estiverem esgotados
