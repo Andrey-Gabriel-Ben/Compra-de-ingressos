@@ -1,7 +1,8 @@
 
 function comprar () {
     let tipoDoIngresso = document.getElementById("tipo-ingresso").value;
-    let quantidade = document.getElementById("qtd").value;
+    let quantidadeGetId = document.getElementById("qtd");
+    let quantidade = quantidadeGetId.value;
     let qtdDisponivelGetId = document.getElementById(`qtd-${tipoDoIngresso}`);
     let qtdDisponivelNum = parseInt(qtdDisponivelGetId.textContent)
 
@@ -18,21 +19,7 @@ function comprar () {
     let novaQuantidade = qtdDisponivelNum - quantidade;
 
     qtdDisponivelGetId.innerHTML = novaQuantidade;
-
-    quantidade.value = " ";
+    
+    quantidadeGetId.value = "";
 
 }
-
-
-
-/*
-Oq fazer:
-
-
-
-
-criar um alert que indique quando a quantidade que deseja ser comprada for superior a disponivel
-
-criar um alert que avise quando os ingressos estiverem esgotados
-
-*/
