@@ -11,6 +11,12 @@ function comprar () {
         return
     };
 
+    
+    if (quantidade < 0 ) {
+        alert("A quantidade de ingressos escolhida é incompatível, favor revisar.")
+    }
+    
+
     if (quantidade == "" || quantidade == 0) {
         alert("Você não adicionou nenhuma quantidade válida para compra. Por favor, revise o campo de quantidade e tente novamente.");
         return
